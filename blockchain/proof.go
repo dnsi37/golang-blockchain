@@ -20,7 +20,7 @@ type ProofOfWork struct {
 func NewProof(b *Block) *ProofOfWork {
 	target := big.NewInt(1)
 	target.Lsh(target, uint(256-Difficulty))
-	//fmt.Printf("target: %d", target)
+	fmt.Printf("target: %b", target)
 	//fmt.Println(uint(256 - Difficulty))
 
 	pow := &ProofOfWork{b, target}
